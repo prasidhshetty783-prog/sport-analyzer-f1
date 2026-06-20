@@ -119,10 +119,13 @@ function RaceFilter({ send, sessions }: {
   const currentYear = parsed.find((p) => p.session_id === current)?.year;
 
   const [year, setYear] = useState<string>("");
+  // Sync the dropdown to the loaded race's year only when the SESSION changes
+  // (keyed on `current`) — NOT on every render. Including `year` here caused a
+  // manual year change to be instantly reverted to the playing race's year.
   useEffect(() => {
     if (currentYear) setYear(currentYear);
-    else if (years.length && !year) setYear(years[0]);
-  }, [currentYear, years, year]);
+    else if (years.length) setYear((y) => y || years[0]);
+  }, [current, currentYear, years]);
 
   if (sessions.length <= 1) return <span className="sb-name">{name ?? "—"}</span>;
 
