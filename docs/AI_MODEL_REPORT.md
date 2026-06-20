@@ -276,5 +276,3 @@ explicit next step (Section 5, item 3).
 - `ml/` — offline training + the backtest that produces the scorecards.
 - `ml/reports/backtest.md` and `ml/reports/hazard_calibration.md` — the raw,
   per-race numbers.
-- `vault/Topics/Prediction Models.md` and `vault/Topics/Calibration Log.md` — the
-  full mechanics and the complete tuning history with honest numbers.

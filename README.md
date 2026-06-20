@@ -79,7 +79,7 @@ ingest/replay_engine.py ───┘   (one internal event bus; live + replay ar
 (recorded fixtures)
 ```
 
-The WebSocket protocol lives in **one file** (`backend/api/schema.py`); TypeScript types are generated from it (`python -m backend.api.gen_types`). The prediction models live in `backend/models/` and are trained offline in `ml/`. A deeper tour is in the interlinked Obsidian notes under [`vault/`](vault/) (start at `vault/Home.md`).
+The WebSocket protocol lives in **one file** (`backend/api/schema.py`); TypeScript types are generated from it (`python -m backend.api.gen_types`). The prediction models live in `backend/models/` and are trained offline in `ml/`. A deeper write-up of the models and decisions is in [`docs/AI_MODEL_REPORT.md`](docs/AI_MODEL_REPORT.md).
 
 ## Project status
 
