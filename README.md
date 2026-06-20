@@ -33,13 +33,10 @@ It runs in two modes, presented as two pages:
 
 ## Screenshots
 
-<!-- Add images here, e.g.:
-![Replay — track map and leaderboard](docs/images/replay.png)
-![Car Detail — AI predictions](docs/images/car-panel.png)
-A short screen-capture GIF of cars moving + predictions updating works best.
--->
 
-_Coming soon — drop a screenshot or GIF of the track map and predictions here._
+https://github.com/user-attachments/assets/4cf0a02d-79be-4b6e-9a55-b9ddd5dce6ab
+
+
 
 ## How accurate are the predictions
 
