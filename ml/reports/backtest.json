@@ -1,0 +1,242 @@
+[
+  {
+    "fixture": "2023_australia_race",
+    "name": "FORMULA 1 ROLEX AUSTRALIAN GRAND PRIX 2023",
+    "total_laps": 59,
+    "evaluations": [
+      {
+        "fraction": 0.3,
+        "lap": 18,
+        "flag": "GREEN",
+        "n_cars": 20,
+        "mae_model": 4.7,
+        "mae_persistence": 3.2,
+        "top3_overlap": 3,
+        "spearman": 0.389
+      },
+      {
+        "fraction": 0.5,
+        "lap": 30,
+        "flag": "GREEN",
+        "n_cars": 20,
+        "mae_model": 4.6,
+        "mae_persistence": 2.5,
+        "top3_overlap": 2,
+        "spearman": 0.402
+      },
+      {
+        "fraction": 0.7,
+        "lap": 41,
+        "flag": "GREEN",
+        "n_cars": 20,
+        "mae_model": 5.1,
+        "mae_persistence": 2.6,
+        "top3_overlap": 1,
+        "spearman": 0.251
+      }
+    ],
+    "mae_model": 4.8,
+    "mae_persistence": 2.767,
+    "top3_hit_rate": 0.667
+  },
+  {
+    "fixture": "2023_bahrain_race",
+    "name": "FORMULA 1 GULF AIR BAHRAIN GRAND PRIX 2023",
+    "total_laps": 57,
+    "evaluations": [
+      {
+        "fraction": 0.3,
+        "lap": 17,
+        "flag": "GREEN",
+        "n_cars": 20,
+        "mae_model": 3.7,
+        "mae_persistence": 2.2,
+        "top3_overlap": 2,
+        "spearman": 0.633
+      },
+      {
+        "fraction": 0.5,
+        "lap": 28,
+        "flag": "GREEN",
+        "n_cars": 20,
+        "mae_model": 2.9,
+        "mae_persistence": 2.5,
+        "top3_overlap": 2,
+        "spearman": 0.675
+      },
+      {
+        "fraction": 0.7,
+        "lap": 40,
+        "flag": "GREEN",
+        "n_cars": 20,
+        "mae_model": 2.3,
+        "mae_persistence": 1.7,
+        "top3_overlap": 3,
+        "spearman": 0.762
+      }
+    ],
+    "mae_model": 2.967,
+    "mae_persistence": 2.133,
+    "top3_hit_rate": 0.778
+  },
+  {
+    "fixture": "2023_brazil_race",
+    "name": "FORMULA 1 ROLEX GRANDE PR\u00caMIO DE S\u00c3O PAULO 2023",
+    "total_laps": 71,
+    "evaluations": [
+      {
+        "fraction": 0.3,
+        "lap": 21,
+        "flag": "GREEN",
+        "n_cars": 20,
+        "mae_model": 4.1,
+        "mae_persistence": 1.55,
+        "top3_overlap": 3,
+        "spearman": 0.502
+      },
+      {
+        "fraction": 0.5,
+        "lap": 36,
+        "flag": "GREEN",
+        "n_cars": 20,
+        "mae_model": 4.0,
+        "mae_persistence": 1.65,
+        "top3_overlap": 2,
+        "spearman": 0.48
+      },
+      {
+        "fraction": 0.7,
+        "lap": 50,
+        "flag": "GREEN",
+        "n_cars": 20,
+        "mae_model": 4.7,
+        "mae_persistence": 1.15,
+        "top3_overlap": 1,
+        "spearman": 0.329
+      }
+    ],
+    "mae_model": 4.267,
+    "mae_persistence": 1.45,
+    "top3_hit_rate": 0.667
+  },
+  {
+    "fixture": "2023_italy_monza_race",
+    "name": "FORMULA 1 PIRELLI GRAN PREMIO D\u2019ITALIA 2023",
+    "total_laps": 52,
+    "evaluations": [
+      {
+        "fraction": 0.3,
+        "lap": 16,
+        "flag": "GREEN",
+        "n_cars": 20,
+        "mae_model": 2.0,
+        "mae_persistence": 1.9,
+        "top3_overlap": 2,
+        "spearman": 0.872
+      },
+      {
+        "fraction": 0.5,
+        "lap": 26,
+        "flag": "GREEN",
+        "n_cars": 20,
+        "mae_model": 1.5,
+        "mae_persistence": 1.2,
+        "top3_overlap": 2,
+        "spearman": 0.934
+      },
+      {
+        "fraction": 0.7,
+        "lap": 36,
+        "flag": "GREEN",
+        "n_cars": 20,
+        "mae_model": 1.5,
+        "mae_persistence": 1.9,
+        "top3_overlap": 3,
+        "spearman": 0.928
+      }
+    ],
+    "mae_model": 1.667,
+    "mae_persistence": 1.667,
+    "top3_hit_rate": 0.778
+  },
+  {
+    "fixture": "2023_monaco_race",
+    "name": "FORMULA 1 GRAND PRIX DE MONACO 2023",
+    "total_laps": 79,
+    "evaluations": [
+      {
+        "fraction": 0.3,
+        "lap": 24,
+        "flag": "GREEN",
+        "n_cars": 20,
+        "mae_model": 2.0,
+        "mae_persistence": 2.0,
+        "top3_overlap": 3,
+        "spearman": 0.877
+      },
+      {
+        "fraction": 0.5,
+        "lap": 40,
+        "flag": "GREEN",
+        "n_cars": 20,
+        "mae_model": 2.5,
+        "mae_persistence": 2.4,
+        "top3_overlap": 1,
+        "spearman": 0.838
+      },
+      {
+        "fraction": 0.7,
+        "lap": 55,
+        "flag": "GREEN",
+        "n_cars": 20,
+        "mae_model": 1.9,
+        "mae_persistence": 2.3,
+        "top3_overlap": 2,
+        "spearman": 0.916
+      }
+    ],
+    "mae_model": 2.133,
+    "mae_persistence": 2.233,
+    "top3_hit_rate": 0.667
+  },
+  {
+    "fixture": "2024_canada_race",
+    "name": "FORMULA 1 AWS GRAND PRIX DU CANADA 2024",
+    "total_laps": 70,
+    "evaluations": [
+      {
+        "fraction": 0.3,
+        "lap": 21,
+        "flag": "GREEN",
+        "n_cars": 20,
+        "mae_model": 3.1,
+        "mae_persistence": 3.2,
+        "top3_overlap": 3,
+        "spearman": 0.749
+      },
+      {
+        "fraction": 0.5,
+        "lap": 35,
+        "flag": "GREEN",
+        "n_cars": 20,
+        "mae_model": 2.2,
+        "mae_persistence": 2.3,
+        "top3_overlap": 3,
+        "spearman": 0.814
+      },
+      {
+        "fraction": 0.7,
+        "lap": 49,
+        "flag": "GREEN",
+        "n_cars": 20,
+        "mae_model": 2.8,
+        "mae_persistence": 2.6,
+        "top3_overlap": 3,
+        "spearman": 0.806
+      }
+    ],
+    "mae_model": 2.7,
+    "mae_persistence": 2.7,
+    "top3_hit_rate": 1.0
+  }
+]

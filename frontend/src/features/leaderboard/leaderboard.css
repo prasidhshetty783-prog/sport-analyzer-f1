@@ -1,0 +1,96 @@
+.leaderboard {
+  grid-area: rail;
+  background: var(--color-bg-surface);
+  border-radius: var(--radius-l);
+  box-shadow: var(--shadow-card), var(--hairline-top);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0 var(--space-1) var(--space-2);
+}
+
+.lb-head, .lb-row {
+  display: grid;
+  grid-template-columns: 30px 4px 44px 1fr 60px 60px 50px 28px;
+  align-items: center;
+  column-gap: var(--space-05);
+  padding: 0 var(--space-1);
+}
+.lb-head {
+  height: 42px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+  position: sticky;
+  top: 0;
+  background: var(--color-bg-surface);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 2;
+}
+
+.lb-rows { position: relative; }
+
+.lb-row {
+  position: absolute;
+  left: 0; right: 0;
+  height: var(--row-h);
+  cursor: pointer;
+  border-radius: var(--radius-s);
+  transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1), background 200ms;
+  background: transparent;
+  will-change: transform;
+}
+.lb-row::after {
+  content: "";
+  position: absolute;
+  left: var(--space-1); right: var(--space-1); bottom: 0;
+  border-bottom: 1px solid var(--color-separator);
+}
+.lb-row:hover { background: var(--color-bg-raised); }
+.lb-row.selected { background: var(--color-accent-soft); box-shadow: inset 2px 0 0 var(--color-accent); }
+.lb-row.battle { box-shadow: inset 3px 0 0 var(--color-battle); }
+.lb-row.battle.selected { box-shadow: inset 3px 0 0 var(--color-battle), inset -2px 0 0 var(--color-accent); }
+
+.lb-pos { font-family: var(--font-mono); font-weight: 700; font-size: var(--text-m); }
+.lb-pos i { font-style: normal; font-size: 9px; margin-left: 2px; vertical-align: 2px; }
+.lb-pos i.up { color: var(--color-flag-green); }
+.lb-pos i.down { color: var(--color-flag-red); }
+
+.lb-team { width: 4px; height: 26px; border-radius: var(--radius-pill); }
+.lb-drv { font-weight: 700; letter-spacing: 0.06em; font-size: var(--text-m); }
+
+.num { font-family: var(--font-mono); font-size: var(--text-s); text-align: right; font-variant-numeric: tabular-nums; }
+.lb-gap, .lb-int { color: var(--color-text-secondary); }
+.lb-last { color: var(--color-text-primary); }
+
+.lb-tyre { display: inline-flex; justify-content: flex-end; align-items: center; gap: 4px; }
+.lb-tyre em { font-style: normal; color: var(--color-text-secondary); }
+.tyre {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  width: 17px; height: 17px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+.tyre-soft { background: var(--color-tyre-soft); }
+.tyre-medium { background: var(--color-tyre-medium); }
+.tyre-hard { background: var(--color-tyre-hard); }
+.tyre-inter { background: var(--color-tyre-inter); }
+.tyre-wet { background: var(--color-tyre-wet); }
+
+.lb-pits { color: var(--color-text-secondary); }
+
+/* Narrow rail / drawer (<=1100px): the full 8-column grid needs ~360px, which
+   cramps a trimmed rail. Drop the two least-critical columns (LAST lap, PIT
+   count) and use a 6-column grid that stays comfortable down to a ~300px rail. */
+@media (max-width: 1100px) {
+  .lb-head, .lb-row {
+    grid-template-columns: 26px 4px minmax(40px, 1fr) 58px 52px 46px;
+  }
+  .lb-last, .lb-pits,
+  .lb-head > :nth-child(6), .lb-head > :nth-child(8) { display: none; }
+}

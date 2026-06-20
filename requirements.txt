@@ -1,0 +1,26 @@
+# Phase 0 — data access spike
+requests>=2.31
+pandas>=2.0
+pyarrow>=14.0
+fastf1>=3.4
+kaggle>=1.6
+python-dotenv>=1.0
+
+# Phase 1 — backend (event bus, replay engine, WS server)
+fastapi>=0.115
+uvicorn[standard]>=0.32
+pydantic>=2.7
+
+# Phase 3 — prediction engine. The *served* models (backend/models/) need only
+# numpy (already pulled in by pandas); these are for the offline TRAINING scripts
+# in ml/, which run on the host. The app degrades to shipped heuristic priors
+# when no trained artifacts are present, so these are effectively optional.
+numpy>=1.26
+xgboost>=2.0      # ml/train_tire.py, ml/train_finish_baseline.py (or lightgbm)
+scikit-learn>=1.4 # GBT fallback if xgboost/lightgbm unavailable
+joblib>=1.3       # serialize trained boosters
+
+# tests
+pytest>=8.0
+pytest-asyncio>=0.24
+httpx>=0.27

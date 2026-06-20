@@ -1,0 +1,160 @@
+/* Design tokens — semantic only. Components must never use raw hex.
+   Design language (June 2026 restyle): premium motorsport — F1 racing red on a
+   deep carbon canvas (dark, the hero theme) and a crisp "paddock white" light
+   theme. Sporty, luxurious, broadcast-grade. Archivo type, tabular timing nums.
+   Dark theme = default vibe but LIGHT is the :root default (toggle adds
+   [data-theme="dark"] on <html>). Flag colours stay semantically distinct from
+   the brand red so a real red flag never reads as "just an accent". */
+
+:root {
+  /* canvas + surfaces — paddock white */
+  --color-page: #eef0f4;            /* cool off-white canvas behind cards */
+  --color-bg-base: #f6f7f9;         /* inside-card wells (map area) */
+  --color-bg-surface: #ffffff;      /* cards */
+  --color-bg-raised: #eef0f4;       /* buttons, inputs */
+  --color-bg-hover: #e4e7ed;
+  --color-border: #e3e5ec;
+  --color-separator: #eef0f4;
+
+  /* text */
+  --color-text-primary: #0e0f14;
+  --color-text-secondary: #5b6072;
+  --color-text-muted: #969aac;
+
+  /* brand accent — F1 racing red */
+  --color-accent: #e10600;
+  --color-accent-strong: #b00500;
+  --color-accent-soft: rgba(225, 6, 0, 0.10);
+  --color-cta: #e10600;
+  --color-cta-text: #ffffff;
+  --color-carbon: #15151c;          /* dark chrome accents on the light theme */
+
+  /* a sporty "speed line" sweep for headers / hero edges */
+  --speed-line: linear-gradient(90deg, var(--color-accent) 0%, rgba(225, 6, 0, 0) 72%);
+
+  /* flag states (kept distinct from the brand red) */
+  --color-flag-green: #1ba85c;
+  --color-flag-yellow: #e8b00c;
+  --color-flag-sc: #ff7a00;
+  --color-flag-vsc: #d79412;
+  --color-flag-red: #ff2d20;
+  --color-flag-chequered: #5b6072;
+
+  /* soft chip backgrounds per flag */
+  --chip-green-bg: rgba(27, 168, 92, 0.12);
+  --chip-yellow-bg: rgba(232, 176, 12, 0.15);
+  --chip-sc-bg: rgba(255, 122, 0, 0.15);
+  --chip-red-bg: rgba(255, 45, 32, 0.13);
+  --chip-grey-bg: rgba(91, 96, 114, 0.12);
+
+  /* data provenance tags (Phase 3) */
+  --color-tag-live: #1ba85c;
+  --color-tag-est: #e8b00c;
+  --color-tag-ai: #7b5cff;
+
+  /* battle highlight */
+  --color-battle: #e8b00c;
+
+  /* track map */
+  --color-track-bed: #e3e4ee;
+  --color-track-edge: #cfd0de;
+  --color-map-label: #5b6072;
+
+  /* tyre compounds (industry colors, tokenized) */
+  --color-tyre-soft: #e8442e;
+  --color-tyre-medium: #e3a812;
+  --color-tyre-hard: #8d93a8;
+  --color-tyre-inter: #1ba85c;
+  --color-tyre-wet: #2f7fe8;
+
+  /* elevation + shadows — refined, premium */
+  --shadow-card:
+    0 1px 2px rgba(16, 18, 28, 0.05),
+    0 8px 28px rgba(16, 18, 28, 0.08);
+  --shadow-pop: 0 6px 22px rgba(16, 18, 28, 0.16);
+  --ring-focus: 0 0 0 3px rgba(225, 6, 0, 0.30);
+  --hairline-top: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+  /* spacing — 8pt scale (4 = half step) */
+  --space-05: 4px;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-6: 48px;
+
+  /* type — Archivo (sporty geometric grotesque), JetBrains Mono for timing */
+  --font-sans: "Archivo", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --tracking-kicker: 0.16em;        /* uppercase eyebrow labels */
+  --text-xs: 11px;
+  --text-s: 12.5px;
+  --text-m: 14px;
+  --text-l: 17px;
+  --text-xl: 22px;
+
+  --radius-s: 8px;
+  --radius-m: 14px;
+  --radius-l: 20px;
+  --radius-pill: 999px;
+  --row-h: 44px;
+}
+
+:root[data-theme="dark"] {
+  /* carbon canvas — the hero motorsport look */
+  --color-page: #08080b;
+  --color-bg-base: #0d0e12;
+  --color-bg-surface: #15161c;
+  --color-bg-raised: #1d1f27;
+  --color-bg-hover: #262833;
+  --color-border: #2a2c37;
+  --color-separator: #1e2028;
+
+  --color-text-primary: #f3f4f8;
+  --color-text-secondary: #a3a8b8;
+  --color-text-muted: #6b7080;
+
+  --color-accent: #ff2630;
+  --color-accent-strong: #e10600;
+  --color-accent-soft: rgba(255, 38, 48, 0.16);
+  --color-cta: #ff2630;
+  --color-cta-text: #ffffff;
+  --color-carbon: #05050a;
+
+  --speed-line: linear-gradient(90deg, var(--color-accent) 0%, rgba(255, 38, 48, 0) 72%);
+
+  --color-flag-green: #27c47a;
+  --color-flag-yellow: #f2c021;
+  --color-flag-sc: #ff8c1a;
+  --color-flag-vsc: #d9a514;
+  --color-flag-red: #ff4136;
+  --color-flag-chequered: #aab4cc;
+
+  --chip-green-bg: rgba(39, 196, 122, 0.16);
+  --chip-yellow-bg: rgba(242, 192, 33, 0.16);
+  --chip-sc-bg: rgba(255, 140, 26, 0.18);
+  --chip-red-bg: rgba(255, 65, 54, 0.18);
+  --chip-grey-bg: rgba(154, 166, 191, 0.14);
+
+  --color-tag-live: #27c47a;
+  --color-tag-est: #f2c021;
+  --color-tag-ai: #8f7dff;
+  --color-battle: #f2c021;
+
+  --color-track-bed: #2c3650;
+  --color-track-edge: #3c4970;
+  --color-map-label: #9aa6bf;
+
+  --color-tyre-soft: #ff4136;
+  --color-tyre-medium: #f2c021;
+  --color-tyre-hard: #d8dee9;
+  --color-tyre-inter: #2ecc71;
+  --color-tyre-wet: #4f9dff;
+
+  --shadow-card:
+    0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 10px 32px rgba(0, 0, 0, 0.55);
+  --shadow-pop: 0 8px 26px rgba(0, 0, 0, 0.6);
+  --ring-focus: 0 0 0 3px rgba(255, 38, 48, 0.38);
+  --hairline-top: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}

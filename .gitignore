@@ -1,0 +1,35 @@
+# data + artifacts (rebuildable / large)
+data/
+models/artifacts/
+ml/reports/*.html
+ml/reports/*.png
+
+# secrets
+.env
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+*.egg-info/
+
+# node (later phases)
+node_modules/
+frontend/dist/
+
+# large local reference assets (NOT part of the app — 2+ GB of raw 3D sources;
+# the app only uses an optional small frontend/public/models/f1.glb)
+F1-2022-Monopost-3D-Model/
+*.blend
+*.c4d
+*.obj
+*.fbx
+
+# personal scratch notes
+Great work with adding elevation al.txt
+
+# misc
+*.log
+.DS_Store
+nohup.out
