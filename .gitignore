@@ -26,6 +26,20 @@ F1-2022-Monopost-3D-Model/
 *.obj
 *.fbx
 
+# raw / demo video — too big for GitHub (100MB hard limit). Host the full demo on
+# YouTube, or drag a small compressed clip into the README editor (GitHub's CDN
+# hosts it) instead of committing video to the repo.
+*.mp4
+*.mov
+*.webm
+
+# internal build / collaboration docs — kept locally, not published to the repo
+CLAUDE.md
+BUILD_PROMPT.md
+CONVERSATION_SUMMARY.md
+LINKEDIN_POST.md
+vault/
+
 # personal scratch notes
 Great work with adding elevation al.txt
 
